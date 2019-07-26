@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1419CD22EA3A2D0013DCCA /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1419CC22EA3A2D0013DCCA /* FirstPageViewController.swift */; };
 		CEE04D2C22E682EF00C5BFEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE04D2B22E682EF00C5BFEB /* AppDelegate.swift */; };
 		CEE04D2E22E682EF00C5BFEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE04D2D22E682EF00C5BFEB /* ViewController.swift */; };
 		CEE04D3122E682EF00C5BFEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE04D2F22E682EF00C5BFEB /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1419CC22EA3A2D0013DCCA /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		CEE04D2822E682EF00C5BFEB /* MapForFlashpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapForFlashpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE04D2B22E682EF00C5BFEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE04D2D22E682EF00C5BFEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				CEE04D2B22E682EF00C5BFEB /* AppDelegate.swift */,
 				CEE04D2D22E682EF00C5BFEB /* ViewController.swift */,
 				CEE04D2F22E682EF00C5BFEB /* Main.storyboard */,
+				7A1419CC22EA3A2D0013DCCA /* FirstPageViewController.swift */,
 				CEE04D3222E682EF00C5BFEB /* Assets.xcassets */,
 				CEE04D3422E682EF00C5BFEB /* LaunchScreen.storyboard */,
 				CEE04D3722E682EF00C5BFEB /* Info.plist */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A1419CD22EA3A2D0013DCCA /* FirstPageViewController.swift in Sources */,
 				CEE04D2E22E682EF00C5BFEB /* ViewController.swift in Sources */,
 				CEE04D2C22E682EF00C5BFEB /* AppDelegate.swift in Sources */,
 			);

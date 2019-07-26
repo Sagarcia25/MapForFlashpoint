@@ -8,13 +8,15 @@
 
 import UIKit
 import MapKit
-import CoreLocation
+//import CoreLocation
 
 class ViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
     var currentCoordinate: CLLocationCoordinate2D?
+    
+    var passedCategory = ""
 
     var locationArray = [
         ["title": "Chicago Park Theatre", "category": "Theatre", "latitude": 41.885134, "longitude": -87.627670],
@@ -26,17 +28,21 @@ class ViewController: UIViewController {
         ["title": "Shed Aquarium", "category": "Museum", "latitude": 41.866430, "longitude": -87.613443],
         ["title": "Fosco Park Community Center", "category": "Park", "latitude": 41.864980, "longitude": -87.656983]
     ]
-    
+  
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mapView.mapType = MKMapType.mutedStandard
         mapView.delegate = self
-        
+        print(passedCategory + "1")
+//        var newArray = locationArray.filter{ $0."category".contains(filterItemName)
+//        }
         configureLocationServices()
     }
 
+    
     func configureLocationServices(){
         
         locationManager.delegate = self
@@ -109,19 +115,30 @@ extension ViewController: MKMapViewDelegate{
         if annotationView == nil{
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView")
         }
-
+        switch passedCategory {
+        case "Park":
         if annotation.subtitle == "Park"{
             annotationView?.image = UIImage(named: "Park")
-        } else if annotation.subtitle == "Library"{
+        }
+        case "Library":
+        if annotation.subtitle == "Library"{
             annotationView?.image = UIImage(named: "Library")
-        } else if annotation.subtitle == "Museum"{
-            annotationView?.image = UIImage(named: "Library")
-        } else if annotation.subtitle == "Theatre"{
+        }
+        case "Museum":
+        if annotation.subtitle == "Museum"{
+            annotationView?.image = UIImage(named: "Museum")
+        }
+        case "Theatre":
+        if annotation.subtitle == "Theatre"{
             annotationView?.image = UIImage(named: "School")
-        } else if annotation === mapView.userLocation{
+        }
+        default:
+            return nil
+        }
+        
+        if annotation === mapView.userLocation{
             annotationView?.image = UIImage(named: "Person")
         }
-
         annotationView?.canShowCallout = true
 
         return annotationView
